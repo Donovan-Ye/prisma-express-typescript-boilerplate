@@ -1,4 +1,6 @@
-FROM node:alpine
+FROM node:20-slim
+RUN apt-get update
+RUN apt-get install -y openssl
 
 RUN mkdir -p /usr/src/node-app && chown -R node:node /usr/src/node-app
 
